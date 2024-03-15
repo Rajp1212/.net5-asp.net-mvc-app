@@ -1,0 +1,16 @@
+﻿@model  Proj3_Patel.Models.RegisterViewModel
+
+
+<h2>Thank you for registering!</h2>
+<h4><strong>Name:</strong> @Model.Registration.Name</h4>
+<h4><strong>Address:</strong> @Model.Registration.Address</h4>
+<h4><strong>City:</strong> @Model.Registration.City</h4>
+<h4><strong>State:</strong> @Model.Registration.State</h4>
+<h4><strong>Zip:</strong> @Model.Registration.Zip</h4>
+<h4><strong>Gender:</strong> @Model.Registration.Gender</h4>
+<h4><strong>Age:</strong> @Model.Registration.Age</h4>
+<h4><strong>Subscribe: </strong>@Model.Registration.IsSubscribing</h4>
+<h4><strong>Degree Program: </strong>@Model.Registration.Degree</h4>
+<h4><strong>Favorite University: </strong>@Model.Registration.University</h4>
+<h5><strong>Registered on: </strong>@Model.RegistrationDate.ToShortDateString()</h5>
+<h5><strong>Client Info: </strong>@Model.ClientInfo</h5>

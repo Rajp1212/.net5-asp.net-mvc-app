@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Proj3_Patel.Models.RegisteredUser
+
+<div class="jumbotron">
+    <h1>University Registration Form</h1>
+    <p class="lead">Register for University application form!</p>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h2>Registration</h2>
+        <form asp-action="Submit" asp-controller="Home" method="post">
+            <table>
+                <tr>
+                    <td><label asp-for="Name"></label></td>
+                    <td><input type="text" asp-for="Name" /></td>
+                    <td><span asp-validation-for="Name" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Address"></label></td>
+                    <td><input type="text" asp-for="Address" /></td>
+                    <td><span asp-validation-for="Address" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="City"></label></td>
+                    <td><input type="text" asp-for="City" /></td>
+                    <td><span asp-validation-for="City" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="State"></label></td>
+                    <td><input type="text" asp-for="State" /></td>
+                    <td><span asp-validation-for="State" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Zip"></label></td>
+                    <td><input type="text" asp-for="Zip" /></td>
+                    <td><span asp-validation-for="Zip" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Gender"></label></td>
+                    <td>
+                        <label>Male</label>
+                        <input type="radio" value="Male" asp-for="Gender" />
+                        <label>Female</label>
+                        <input type="radio" value="Female" asp-for="Gender" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Age"></label></td>
+                    <td><input type="text" asp-for="Age" /></td>
+                    <td><span asp-validation-for="Age" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="UserName"></label></td>
+                    <td><input type="text" asp-for="UserName" /></td>
+                    <td><span asp-validation-for="UserName" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="Password"></label></td>
+                    <td><input type="password" asp-for="Password" /></td>
+                    <td><span asp-validation-for="Password" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td><label asp-for="PasswordConfirm"></label></td>
+                    <td><input type="password" asp-for="PasswordConfirm" /></td>
+                    <td><span asp-validation-for="PasswordConfirm" class="text-danger"></span></td>
+                </tr>
+                <tr>
+                    <td>Select Degree Program</td>
+                    <td><select asp-for="Degree" asp-items="ViewBag.DropDownOptions"></select></td>
+                </tr>
+                <tr>
+                    <td>Favorite University?</td>
+                    <td><select asp-for="University" asp-items="ViewBag.DropDownOption"></select></td>
+                </tr>
+                <tr>
+                    <td>Subscribe to receive University Email?</td>
+                    <td><input type="checkbox" value="true" asp-for="IsSubscribing" /></td>
+                </tr>
+            </table>
+            <input type="submit" value="Register" class="btn btn-success">
+        </form>
+    </div>
+</div>
